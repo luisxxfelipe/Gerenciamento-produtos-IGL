@@ -6,7 +6,6 @@ import {
   Hash,
   Pencil,
   Trash2,
-  X,
   Loader2,
   PlusCircle,
   AlertTriangle,
