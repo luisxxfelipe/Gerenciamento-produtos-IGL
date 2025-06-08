@@ -2,11 +2,13 @@ const jwt = require('jsonwebtoken');
 
 
 function verifyToken(req, res, next) {
-  const token = req.headers['authorization'];
+  const authHeader = req.headers['authorization'];
 
-  if (!token) {
+  if (!authHeader) {
     return res.status(401).json({ error: 'Token não fornecido' });
   }
+
+  const token = authHeader.split(' ')[1]; // Extrai o token do cabeçalho Authorization
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {

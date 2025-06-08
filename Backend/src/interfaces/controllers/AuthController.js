@@ -4,6 +4,39 @@ const AuthService = require("../../application/services/AuthService");
 const router = express.Router();
 const authService = new AuthService();
 
+/**
+ * @swagger
+ * /auth/login:
+ *   post:
+ *     summary: Realiza login do usuário
+ *     tags:
+ *       - Autenticação
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 example: usuario@email.com
+ *               senha:
+ *                 type: string
+ *                 example: senha123
+ *     responses:
+ *       200:
+ *         description: Login realizado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 token:
+ *                   type: string
+ *       401:
+ *         description: Credenciais inválidas
+ */
 router.post("/login", async (req, res) => {
   try {
     const { email, senha } = req.body;

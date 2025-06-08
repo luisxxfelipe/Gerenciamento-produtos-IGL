@@ -1,7 +1,12 @@
-import LoginPage from "./pages/LoginPage";
+import { BrowserRouter as Router } from "react-router-dom";
+import Rotas from "./routes/Rotas";
 
 function App() {
-    return <LoginPage/>;
-  }
+  return (
+    <Router>
+      <Rotas />
+    </Router>
+  );
+}
 
-export default App
+export default App;
