@@ -126,7 +126,7 @@ Durante o desenvolvimento, utilizei uma IA (ChatGPT) para:
 
 - Obter **auxílio na configuração do Swagger** com segurança JWT incluída.
 - Esclarecer a estrutura e **lógica do middleware com JWT**, especialmente extração do `userId` do token.
-- Obter ajuda em **ajustes visuais e organizacionais** com **Tailwind CSS e componentes do Shadcn**, mantendo o código limpo e responsivo.
+- Obter ajuda em **ajustes visuais e organizacionais** com **Tailwind CSS**, mantendo o código limpo e responsivo.
 - Revisar a **estrutura em camadas** e fornecer recomendações arquiteturais.
 
 - A IA foi usada como ferramenta de apoio técnico e boas práticas.
